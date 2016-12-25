@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchSampleApp_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Herbs" id="nSx-nj-IM7"/>
+                        <label width="121" height="100" alignment="center" textAlignment="justified" numberOfLines="0" id="BLq-GF-cBf">
+                            <string key="text">In general use, herbs are any plants used for flavoring, food, medicine, or perfume. 
+
+Culinary use typically distinguishes herbs as referring to the leafy green parts of a plant (either fresh or dried), from a "spice", a product from another part of the plant, including seeds, berries, bark, roots and fruits.</string>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="7"/>
+                        </label>
+                        <group width="1" height="72" alignment="left" id="aOf-v7-vsa">
+                            <items>
+                                <button width="0.20000000000000001" height="1" alignment="left" backgroundImage="Basil" id="qAA-YZ-LT8">
+                                    <connections>
+                                        <segue destination="si9-PO-hEK" kind="push" identifier="BasilSegue" id="xrH-1z-kha"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" height="1" alignment="left" backgroundImage="Saffron" id="mgz-nf-ZOt">
+                                    <connections>
+                                        <segue destination="si9-PO-hEK" kind="push" identifier="SaffronSegue" id="jVK-wp-gHu"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" height="1" alignment="left" backgroundImage="Rosemary" id="nuE-9d-w6A">
+                                    <connections>
+                                        <segue destination="si9-PO-hEK" kind="push" identifier="RosemarySegue" id="wxE-IQ-j1E"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" height="1" alignment="left" backgroundImage="Marjoram" id="G6e-ie-5gm">
+                                    <connections>
+                                        <segue destination="si9-PO-hEK" kind="push" identifier="MarjoramSegue" id="uwK-RO-Wxk"/>
+                                    </connections>
+                                </button>
+                                <button width="0.20000000000000001" height="1" alignment="left" backgroundImage="Anise" id="jVH-uN-sRd">
+                                    <connections>
+                                        <segue destination="si9-PO-hEK" kind="push" identifier="AniseSegue" id="RNs-eq-PJd"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="106" y="162"/>
+        </scene>
+        <!--Detail Page Controller-->
+        <scene sceneID="9sC-oa-4WR">
+            <objects>
+                <controller id="si9-PO-hEK" customClass="DetailPageController" customModule="WatchSampleApp_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" title="Show Image" numberOfLines="1" id="pZ1-fS-Ya9">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="8"/>
+                            <connections>
+                                <action selector="showImageOnlySwitch:" destination="si9-PO-hEK" id="O9o-7X-JhL"/>
+                            </connections>
+                        </switch>
+                        <group width="1" alignment="left" backgroundImage="Basil" layout="vertical" id="QMP-2w-ciN">
+                            <items>
+                                <group width="1" height="24" alignment="left" id="oqg-i6-rNM">
+                                    <items>
+                                        <label alignment="center" text="Basil" id="usN-vh-RYQ">
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </group>
+                                <group width="1" height="123" alignment="left" contentMode="scaleAspectFit" id="Pis-dM-fKs">
+                                    <items>
+                                        <label width="122" height="126" alignment="center" textAlignment="justified" numberOfLines="0" id="qIJ-CM-Rvj">
+                                            <string key="text">Basil is commonly used fresh in cooked recipes. In general, it is added at the last moment, as cooking quickly destroys the flavor. The fresh herb can be kept for a short time in plastic bags in the refrigerator, or for a longer period in the freezer, after being blanched quickly in boiling water. The dried herb also loses most of its flavor, and what little flavor remains tastes very different.</string>
+                                            <fontDescription key="font" type="system" weight="medium" pointSize="7"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </group>
+                            </items>
+                        </group>
+                        <button width="1" height="15" alignment="left" title="Know More" id="ksy-XG-S1R">
+                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="8"/>
+                            <connections>
+                                <segue destination="Zvv-By-9Yi" kind="push" identifier="KnowMoreSegue" id="jHJ-Mr-ETz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="QMP-2w-ciN" id="MVL-tI-3z1"/>
+                        <outlet property="detailGroup" destination="Pis-dM-fKs" id="UtE-XB-h5K"/>
+                        <outlet property="detailLabel" destination="qIJ-CM-Rvj" id="odm-5P-DpR"/>
+                        <outlet property="headingGroup" destination="oqg-i6-rNM" id="7SH-PL-DIX"/>
+                        <outlet property="headingLabel" destination="usN-vh-RYQ" id="hKg-Rd-ZTx"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="356" y="168"/>
+        </scene>
+        <!--Uses Controller-->
+        <scene sceneID="xDk-dm-agE">
+            <objects>
+                <controller id="Zvv-By-9Yi" customClass="UsesController" customModule="WatchSampleApp_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" backgroundImage="Basil" layout="vertical" id="RIH-vn-SUY">
+                            <items>
+                                <group width="1" alignment="left" id="QBl-Ct-eLZ">
+                                    <items>
+                                        <label width="1" alignment="center" text="Basil" textAlignment="center" id="Gyh-k6-4oy">
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </group>
+                                <table alignment="left" id="jIf-WX-ao2">
+                                    <items>
+                                        <tableRow identifier="CustomTableRow" id="lIy-oX-2C0" customClass="CustomTableRow" customModule="WatchSampleApp_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" id="w8y-2P-HUO">
+                                                <items>
+                                                    <label width="1" alignment="center" verticalAlignment="center" textAlignment="justified" numberOfLines="0" id="faH-ZU-evb">
+                                                        <string key="text">Calming the Stomach– The Italians may be on to something with adding Basil to everything. It is thought to have a calming effect on the stomach and 1/2 teaspoon of dried or fresh Basil Leaf in water can often help sooth indigestion and alleviate feelings of fullness.</string>
+                                                        <fontDescription key="font" type="system" pointSize="6"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="herbUseLabel" destination="faH-ZU-evb" id="wb1-WO-exE"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="RIH-vn-SUY" id="YoG-yY-Wsl"/>
+                        <outlet property="headingLabel" destination="Gyh-k6-4oy" id="FN4-iY-g5D"/>
+                        <outlet property="tableView" destination="jIf-WX-ao2" id="CRX-pw-EdE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="602" y="146"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uwK-RO-Wxk"/>
+    </inferredMetricsTieBreakers>
+</document>
